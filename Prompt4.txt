@@ -1,0 +1,30 @@
+Question #4: Checking for Uniqueness
+Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+Example
+Input: "hello"
+
+Output: false
+
+Input: "copyright"
+
+Output: true
+
+PSEUDOCODE:
+- I want a way to count to the number of times an element appears -- maybe an object?
+- I want to loop through and check if each element exists in the object yet
+- if it doesn't exist yet, I want to add it to the object
+- if it does, I want to break out of the loop and return false
+
+function unique(string) {
+  let counterObj = {};
+  for(let i = 0; i < string.length; i ++) {
+    const char = string[i];
+      if (counterObj[char]){
+        return false;
+      } else {
+    }
+    counterObj[char] = true;
+  }
+  return true;
+}
